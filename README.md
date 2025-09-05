@@ -1,53 +1,84 @@
-Secure Python Password Manager
+# 🔐 Secure Python Password Manager
 
-A simple command-line password manager in Python that encrypts your passwords using a master password. Uses Fernet symmetric encryption with a strong key derived from your master password.
+A simple **command-line password manager** in Python that encrypts your passwords using a **master password**.  
+It uses **Fernet symmetric encryption** with a strong key derived from your master password.  
 
-Features
+---
 
-Add and view passwords securely
+## ✨ Features
+- 🔒 Add and view passwords securely  
+- 🔑 Encrypts passwords with a **master password**  
+- 🛡️ Uses **PBKDF2-HMAC-SHA256** key derivation  
+- 💻 Easy-to-use CLI interface  
+- 🌍 Works on **Windows, macOS, and Linux**
 
-Encrypts passwords with a master password
+---
 
-Uses PBKDF2-HMAC-SHA256 key derivation
+## 🚀 Getting Started
 
-Easy-to-use CLI interface
+### ✅ Prerequisites
+- Python **3.7+**  
+- Install dependencies:
+  pip install cryptography
 
-Works on Windows, macOS, and Linux
-
-Getting Started
-Prerequisites
-
-Python 3.7+ is required. You also need the cryptography library:
-
-pip install cryptography
-
-Usage
-
-Clone or download the repository.
-
-Run the program:
-
+### ▶️ Usage
+1. Clone or download the repository.  
+2. Run the program:
 python pw_manager.py
 
+- On first run, the program will create a random **salt file** (`salt.bin`).  
+- Enter a **master password** when prompted.  
+- Use the menu to view or add passwords.  
 
-On first run, the program will create a random salt file (salt.bin).
+---
 
-Enter a master password when prompted.
+## 📖 Menu Options
+1.View passwords – Displays all saved passwords
+2.Add new password – Add a new account with username and password
+3.Quit – Exit the program
 
-Use the menu to view or add passwords.
+---
 
-Menu Options
+## 📝 Example Workflow
+Run the program:
+=== Secure Password Manager ===
+Enter your master password:****
 
-1. View passwords – Displays all saved passwords.
+Choose **Add new password**:
 
-2. Add new password – Add a new account with username and password.
+Select mode:
+1.View passwords
+2.Add new password
+3.Quit
+Choice (1/2/3): 2
+Enter account name: Gmail
+Enter account password: ****
+Password saved!
 
-3. Quit – Exit the program.
+View stored passwords:
 
-Security Notes
+Select mode:
+1.View passwords
+2.Add new password
+3.Quit
+Choice (1/2/3): 1
+User: Gmail | Password: mysecretpassword
 
-Do not upload passwords.txt or salt.bin to GitHub — these contain your encrypted passwords.
+---
 
-Keep your master password safe. Losing it means losing access to all passwords.
+## ⚠️ Security Notes
+- ❌ Do **not** upload `passwords.txt` or `salt.bin` to GitHub — these contain your encrypted passwords.  
+- 🔑 Keep your **master password safe**. Losing it means losing access to all saved passwords.  
+- 💾 All passwords are stored **locally** in an encrypted file.  
 
-The program stores all passwords locally in an encrypted file.
+---
+
+## 🔮 Future Improvements
+- 🔀 Add a **random password generator**  
+- 📋 Copy passwords to clipboard instead of printing  
+- 📝 Add **delete/edit** functions for saved passwords  
+- 🖥️ Build a **GUI version**  
+
+--- 
+
+
